@@ -18,11 +18,11 @@ s5 = Shoe.create(name: "Jordan 1 Retro High Pollen", brand: "Jordan", silhouette
 
 
 puts 'Load in UserShoes'
-UserShoe.create(user_id: u1.id, shoe_id: s1.id, size: 7, condition: 8, description: "Some scuffs on midsole")
-UserShoe.create(user_id: u1.id, shoe_id: s3.id, size: 7, condition: 7, description: "Creased Toebox")
-UserShoe.create(user_id: u2.id, shoe_id: s4.id, size: 8, condition: 10, description: "Brand New Deadstock")
-UserShoe.create(user_id: u1.id, shoe_id: s5.id, size: 10, condition: 5, description: "Beaters")
-UserShoe.create(user_id: u2.id, shoe_id: s1.id, size: 8, condition: 7, description: "Worn")
-UserShoe.create(user_id: u1.id, shoe_id: s2.id, size: 6, condition: 8, description: "Few flaws")
+UserShoe.create(user_id: u1, shoe_id: s1, size: 7, condition: 8, description: "Some scuffs on midsole")
+UserShoe.create(user_id: u1, shoe_id: s3, size: 7, condition: 7, description: "Creased Toebox")
+UserShoe.create(user_id: u2, shoe_id: s4, size: 8, condition: 10, description: "Brand New Deadstock")
+UserShoe.create(user_id: u1, shoe_id: s5, size: 10, condition: 5, description: "Beaters")
+UserShoe.create(user_id: u2, shoe_id: s1, size: 8, condition: 7, description: "Worn")
+UserShoe.create(user_id: u1, shoe_id: s2, size: 6, condition: 8, description: "Few flaws")
 
-q
+#decided to manually create seed data using fake examplejson and fetching from api website 

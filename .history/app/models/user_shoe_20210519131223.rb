@@ -1,0 +1,2 @@
+class UserShoe < ApplicationRecord
+end
