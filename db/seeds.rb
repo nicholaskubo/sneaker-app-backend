@@ -24,5 +24,3 @@ UserShoe.create(user_id: u2.id, shoe_id: s4.id, size: 8, condition: 10, descript
 UserShoe.create(user_id: u1.id, shoe_id: s5.id, size: 10, condition: 5, description: "Beaters")
 UserShoe.create(user_id: u2.id, shoe_id: s1.id, size: 8, condition: 7, description: "Worn")
 UserShoe.create(user_id: u1.id, shoe_id: s2.id, size: 6, condition: 8, description: "Few flaws")
-
-q
