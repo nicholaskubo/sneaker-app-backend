@@ -1,5 +1,5 @@
 class UserShoesController < ApplicationController
-    skip_before_action :authorized, only: [:index, :show]
+    skip_before_action :authorized, only: [:index, :show, :create]
 
     def index
         user_shoes = UserShoe.all
@@ -11,22 +11,22 @@ class UserShoesController < ApplicationController
         render json: user_shoe
     end
 
-    def new
+    def new()
         user_shoe = UserShoe.new
     end
 
-    def create
-        user_shoe = UserShoe.new(user_shoe_params)
+    def create()
+        user_shoe = UserShoe.new
         user_shoe.user = @@user
-        user_shoe.shoe_id = user_shoe_params[:shoe_id]
-        if current_user() && user_shoe.save
+        user_shoe.shoe_id = user_shoe_params[:id]
+        if user_shoe.save
             render json: user_shoe, :status => :created
         else
             render json: { error: user_shoe.errors.full_messages }, :status => :bad_request
         end
     end
 
-    def destroy
+    def destroy()
         user_shoe = @@user.user_shoes.find_by(id: params[:id])
         if user_shoe.destroy && current_user()
             render json: { success: "Shoe removed from list" }, :status => :ok
@@ -36,8 +36,8 @@ class UserShoesController < ApplicationController
     end
 
     private
-    def user_shoe_params
-        params.require(:user_shoe).permit(:shoe_id, :size, :condition, :description)
+    def user_shoe_params()
+        params.require(:user_shoe).permit(:id)
     end
 
 end

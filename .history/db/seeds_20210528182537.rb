@@ -31,13 +31,13 @@ Shoe.destroy_all
 
 puts 'Load in Users'
 
-all_bios = ["Huge Sneakerhead", "I love shoes", "Please don't touch my raf", "Yeezy taught me", "don't tell my wife", "R.I.P. Kobe", "Fashion Killa", "Goat", "It's Lit", "Sneaker Plug", "kING VAMP", "slat", "rIP mF dOOM ! wTF", "Got more kicks than friends", "Baller on a budget", "Simple Fits", ""]
+all_bios = ["Huge Sneakerhead", "I love shoes", "Please don't touch my raf", "Yeezy taught me"]
 
-# 10.times do 
-#     User.create(username: Faker::Name.unique.first_name, password: "password", image: "https://i1.sndcdn.com/artworks-000032207744-pq640x-t500x500.jpg", bio: all_bios.sample)
-# end
+10.times do 
+    User.create(username: Faker::Name.unique.first_name, password: "password", image: "https://i1.sndcdn.com/artworks-000032207744-pq640x-t500x500.jpg", bio: all_bios.sample)
+end
 
-40.times do 
+12.times do 
     User.create(username: Faker::FunnyName.unique.name, password: "password", image: "https://i1.sndcdn.com/artworks-000032207744-pq640x-t500x500.jpg", bio: all_bios.sample)
 end
 
@@ -97,40 +97,6 @@ page_2["results"].each do |s|
             )
         end
 
-puts "get page 3"
-page_3 = shoe_api.get_sneaker_details("3")
-
-puts "make page 3"
-page_3["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
-
-puts "get page 4"
-page_4 = shoe_api.get_sneaker_details("4")
-
-puts "make page 4"
-page_4["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
-
         
 
 
@@ -144,10 +110,10 @@ deadstock = ["DSWT", "Brand New", "had to get one to rock and one to stock", "Ne
 great_description = ["Looks new", "worn a few times", "Beautiful shoe" "No signs of wear", "basically new", "worn in the house only", "Tried on", "Worn twice", "NEWISH", "looks new af", "basically ds", "Flawless", "worn once", "Worn Twice", "can wear this anywhere", "Heat", "crazy shoe", "this shits flawless", "i would eat off of this shoe", "I would eat off of this shoe", "My favorite colorway"]
 great_condition =[9, 9.5] 
 
-good_description = ["worn", "Lots of life left", "Great shoe" "best release of the year", "Lots of life left in it", "awesome shoe", "Doubled up on these", "fire on foot", "sheeeeesh", "Absolute gas", "DOPE in hand" "My favorite colorway", "banger of a shoe", "gas", "incredible shoe", "even better in person", "fire in person", "fits perfect", "sick af"]
+good_description = ["worn", "Lots of life left", "Great shoe" "best release of the year", "Lots of life left in it", "awesome shoe", "Doubled up on these", "fire on foot", "sheeeeesh", "Absolute gas", "My favorite colorway", "banger of a shoe", "gas", "incredible shoe", "even better in person", "fire in person", "fits perfect", "sick af"]
 good_condition =[7.5, 8, 8.5]
 
-shit_description = ["nasty", "still has life in it", "wearable", "i'll die in these shoes", "never tossing these", "still fly", "Got life in em", "HEAT", "Crazy on foot", "crepe of the year", "got em for a steal", "Found at Goodwill", "wow nasty", "skateable", "gaspack", "Jesus Christ", "Fire AF", "DAMN these nice", "My dress shoes", "Perfect for a date or the club", "Formal but ready to party", "fly af", "Beat as shit", "NASTY",  "Wtf was I thinking", "God's shoes", "fire emoji gas emoji", "sheeeeeeeeeeeeeeeesh", "Absolute Heaters", "Crazy details on these" ] 
+shit_description = ["nasty", "still has life in it", "wearable", "i'll die in these shoes", "never tossing these", "still fly", "Got life in em", "HEAT", "Crazy on foot", "crepe of the year", "got em for a steal", "Found at Goodwill", "wow nasty", "skateable", "gaspack", "Jesus Christ", "Fire AF", "DAMN these nice", "My dress shoes", "Perfect for a date or the club", "Formal but ready to party", "fly af", "Beat as shit", "NASTY",  "Wtf was I thinking", "God's shoes", "fire emoji gas emoji", "sheeeeeeeeeeeeeeeesh", "Absolute Heaters" ] 
 shit_condition =[4.5, 5, 5.5, 6] 
 
 
@@ -263,48 +229,14 @@ end
     UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: shit_condition.sample, description: shit_description.sample)
 end 
 
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: great_condition.sample, description: great_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: 10, description: deadstock.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: great_condition.sample, description: great_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: good_condition.sample, description: good_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: shit_condition.sample, description: shit_description.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: great_condition.sample, description: great_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: good_condition.sample, description: good_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: shit_condition.sample, description: shit_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: 10, description: deadstock.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: shit_condition.sample, description: shit_description.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: great_condition.sample, description: great_description.sample)
-end 
 
 
+
+# UserShoe.create(user_id: u1.id, shoe_id: s2.id, size: 4, condition: 7, description: "Used")
+# UserShoe.create(user_id: u1.id, shoe_id: s5.id, size: 7, condition: 5, description: "Beat")
+# UserShoe.create(user_id: u1.id, shoe_id: s4.id, size: 8, condition: 10, description: "New")
+# UserShoe.create(user_id: u1.id, shoe_id: s3.id, size: 7, condition: 7, description: "Creased Toebox")
+# UserShoe.create(user_id: u2.id, shoe_id: s4.id, size: 8, condition: 10, description: "Brand New Deadstock")
+# UserShoe.create(user_id: u1.id, shoe_id: s5.id, size: 10, condition: 5, description: "Beaters")
+# UserShoe.create(user_id: u2.id, shoe_id: s1.id, size: 8, condition: 7, description: "Worn")
+# UserShoe.create(user_id: u1.id, shoe_id: s2.id, size: 6, condition: 8, description: "Few flaws")
