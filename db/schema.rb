@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_05_19_201224) do
     t.string "brand"
     t.string "silhouette"
     t.string "sku"
-    t.integer "release_year"
+    t.string "release_date"
     t.string "colorway"
     t.integer "retail_price"
     t.string "gender"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2021_05_19_201224) do
     t.integer "user_id", null: false
     t.integer "shoe_id", null: false
     t.decimal "size"
-    t.integer "condition"
+    t.decimal "condition"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
