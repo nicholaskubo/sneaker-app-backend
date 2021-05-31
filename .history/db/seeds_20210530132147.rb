@@ -12,7 +12,7 @@ all_bios = ["TIP TOEIN IN MY JORDANS", "Bands, bands, bands", "Got it out the mu
 
 backgrounds = ["bg1", "bg2"]
 
-30.times do 
+26.times do 
     User.create(username: Faker::FunnyName.unique.name, password: "password", image: Faker::Avatar.image(size: "150x150", format: "jpg", set: "set2", bgset: backgrounds.sample ), bio: all_bios.sample)
 end
 
@@ -1718,10 +1718,10 @@ deadstock = ["DSWT", "BRAND NEW", "had to get one to rock and one to stock", "Ne
 great_description = ["Looks new", "Worn a few times", "Beautiful shoe", "Worn on the weekends", "No signs of wear", "basically new", "worn in the house only", "Tried on", "NEWISH", "basically ds", "Flawless", "Worn Twice", "Can wear this anywhere", "Heat", "Crazy shoe", "this shits flawless", "i would eat off of this shoe", "I would eat off of this shoe", "My favorite colorway", "Might be fake"]
 great_condition =[9, 9.5] 
 
-good_description = ["Lots of life left", "best release of the year", "Lots of life left in it", "These got me flexing", "awesome shoe", "Doubled up on these", "fire on foot", "sheeeeesh", "Absolute gas", "DOPE in hand", "My favorite colorway", "banger of a shoe", "even better in person", "fire in person", "fits perfect", "sick af", "just got these back from my barber", "Smell awful but still lookin fresh", "Jesus would have worn these", "couple holes, but i'll wear it"]
+good_description = ["Lots of life left", "best release of the year", "Lots of life left in it", "awesome shoe", "Doubled up on these", "fire on foot", "sheeeeesh", "Absolute gas", "DOPE in hand", "My favorite colorway", "banger of a shoe", "even better in person", "fire in person", "fits perfect", "sick af", "just got these back from my barber", "Smell awful but still lookin fresh", "Jesus would have worn these", "couple holes, but i'll wear it"]
 good_condition =[7.5, 8, 8.5]
 
-shit_description = ["Nasty", "still has life in it", "yuck", "wearable", "i'll die in these shoes", "never tossing these, on my momma", "I used to shutdown the mall in these", "Left toe pokes out but overall immaculate", "Still fly!", "Got life in em", "HEAT", "Crazy on foot", "crepe of the year", "got em for a steal", "Found at Goodwill", "wow nasty", "skateable", "gaspack", "Jesus Christ", "Fire AF", "DAMN these nice", "My dress shoes", "Perfect for a date or the club", "Formal but ready to party", "fly af", "Beat as shit", "NASTY",  "Wtf was I thinking", "God's shoes", "fire emoji gas emoji", "sheeeeeeeeeeeeeeeesh", "Absolute Heaters", "Crazy details on these" ] 
+shit_description = ["Nasty", "still has life in it", "yuck", "wearable", "i'll die in these shoes", "never tossing these, on my momma", "Still fly!", "Got life in em", "HEAT", "Crazy on foot", "crepe of the year", "got em for a steal", "Found at Goodwill", "wow nasty", "skateable", "gaspack", "Jesus Christ", "Fire AF", "DAMN these nice", "My dress shoes", "Perfect for a date or the club", "Formal but ready to party", "fly af", "Beat as shit", "NASTY",  "Wtf was I thinking", "God's shoes", "fire emoji gas emoji", "sheeeeeeeeeeeeeeeesh", "Absolute Heaters", "Crazy details on these" ] 
 shit_condition =[4.5, 5, 5.5, 6] 
 
 
@@ -1793,37 +1793,6 @@ end
     UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: 10, description: deadstock.sample)
 end 
 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: great_condition.sample, description: great_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: good_condition.sample, description: good_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: shit_condition.sample, description: shit_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: 10, description: deadstock.sample)
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: great_condition.sample, description: great_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: good_condition.sample, description: good_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: shit_condition.sample, description: shit_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: 10, description: deadstock.sample)
-
 2.times do
     UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: great_condition.sample, description: great_description.sample)
 end 
@@ -1834,102 +1803,6 @@ end
 
 2.times do
     UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: good_condition.sample, description: good_description.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: 10, description: deadstock.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: great_condition.sample, description: great_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: good_condition.sample, description: good_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: shit_condition.sample, description: shit_description.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: 10, description: deadstock.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: great_condition.sample, description: great_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: good_condition.sample, description: good_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: shit_condition.sample, description: shit_description.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: 10, description: deadstock.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: great_condition.sample, description: great_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: good_condition.sample, description: good_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: shit_condition.sample, description: shit_description.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: 10, description: deadstock.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: great_condition.sample, description: great_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: good_condition.sample, description: good_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: shit_condition.sample, description: shit_description.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: 10, description: deadstock.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: great_condition.sample, description: great_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: good_condition.sample, description: good_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: shit_condition.sample, description: shit_description.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: 10, description: deadstock.sample)
-end 
-
-3.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: great_condition.sample, description: great_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: good_condition.sample, description: good_description.sample)
-end 
-
-2.times do
-    UserShoe.create(user: User.all.sample , shoe:  Shoe.all.sample, size: all_sizes.sample, condition: shit_condition.sample, description: shit_description.sample)
 end 
 
 3.times do
