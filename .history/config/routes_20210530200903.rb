@@ -5,10 +5,7 @@ Rails.application.routes.draw do
   resources :users
   resources :shoes
   resources :user_shoes
-  resources :likes
-  resources :comments
 
   post '/login', to: 'sessions#create'
 
 end
-
