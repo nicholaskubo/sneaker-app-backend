@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_19_201224) do
+ActiveRecord::Schema.define(version: 2021_05_31_015309) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "user_shoe_id", null: false
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_comments_on_user_id"
+    t.index ["user_shoe_id"], name: "index_comments_on_user_shoe_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "user_shoe_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_likes_on_user_id"
+    t.index ["user_shoe_id"], name: "index_likes_on_user_shoe_id"
+  end
 
   create_table "shoes", force: :cascade do |t|
     t.string "name"
@@ -47,6 +66,10 @@ ActiveRecord::Schema.define(version: 2021_05_19_201224) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "comments", "user_shoes"
+  add_foreign_key "comments", "users"
+  add_foreign_key "likes", "user_shoes"
+  add_foreign_key "likes", "users"
   add_foreign_key "user_shoes", "shoes"
   add_foreign_key "user_shoes", "users"
 end
