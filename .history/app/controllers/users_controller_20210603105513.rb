@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    skip_before_action :authorized, only: [:index, :show, :create]
+    skip_before_action :authorized, only: [:index, :show, :create, :update]
 
     def index
         users = User.all
@@ -27,17 +27,29 @@ class UsersController < ApplicationController
 
     def update 
         if @@user
-            @@user.update_attribute(:bio, params[:user][:bio] )
-            @@user.update_attribute(:image, params[:user][:image] )
+            @@user.bio = "#{params[:bio]}"
+            @@user.image = edit_user_params().image
+            @@user.save
             render json: @@user, status: :accepted
         else
             render json: {msg: "Failed Update"}, status: :not_acceptable
         end
     end
 
+    # def update
+    #     if @@user.update(edit_user_params)
+    #         render json: @@user, status: :accepted 
+    #     else
+    #         render json: {msg: "Failed Update"}, status: :not_acceptable
+    #     end
+    # end
 
     private
     def user_params
-        params.require(:user).permit(:username, :image, :bio, :password , :id)
+        params.require(:user).permit(:username, :image, :bio, :password)
+    end
+
+    def edit_user_params
+        params.require(:user).permit(:image, :bio)
     end
 end

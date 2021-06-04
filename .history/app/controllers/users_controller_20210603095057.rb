@@ -25,19 +25,36 @@ class UsersController < ApplicationController
         end
     end
 
-    def update 
-        if @@user
-            @@user.update_attribute(:bio, params[:user][:bio] )
-            @@user.update_attribute(:image, params[:user][:image] )
-            render json: @@user, status: :accepted
+    # def custom_update_attributes(params)
+    #     if params[:password].blank?
+    #       params.delete :password
+    #       update_attributes params
+    #     end
+    #   end
+    
+
+    # def update
+    #     if @user.custom_update_attributes(params[:user])
+    #         render json: @user, status: :acceptable
+    #     else
+    #         render json: {msg: "Failed Update"}, status: :not_acceptable
+    #     end
+    # end
+
+    def update
+        if @@user.update(edit_user_params)
+            render json: @@user, status: :acceptable
         else
             render json: {msg: "Failed Update"}, status: :not_acceptable
         end
     end
 
-
     private
     def user_params
-        params.require(:user).permit(:username, :image, :bio, :password , :id)
+        params.require(:user).permit(:username, :image, :bio, :password)
+    end
+
+    def edit_user_params
+        params.require(:user).permit(:username, :image, :bio)
     end
 end

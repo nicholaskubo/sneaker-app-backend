@@ -12,7 +12,7 @@ all_bios = ["TIP TOEIN IN MY JORDANS", "Bands, bands, bands", "Got it out the mu
 
 backgrounds = ["bg1", "bg2"]
 
-30.times do 
+32.times do 
     User.create(username: Faker::FunnyName.unique.name, password: "password", image: Faker::Avatar.image(size: "150x150", format: "jpg", set: "set2", bgset: backgrounds.sample ), bio: all_bios.sample)
 end
 
@@ -55,327 +55,326 @@ page_1["results"].each do |s|
             )
         end
 
-puts "get page 2"
-page_2 = shoe_api.get_sneaker_details("2")
+# puts "get page 2"
+# page_2 = shoe_api.get_sneaker_details("2")
 
-puts "make page 2"
-page_2["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "make page 2"
+# page_2["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "get page 3"
-page_3 = shoe_api.get_sneaker_details("3")
+# puts "get page 3"
+# page_3 = shoe_api.get_sneaker_details("3")
 
-puts "make page 3"
-page_3["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "make page 3"
+# page_3["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "get page 4"
-page_4 = shoe_api.get_sneaker_details("4")
+# puts "get page 4"
+# page_4 = shoe_api.get_sneaker_details("4")
 
-puts "make page 4"
-page_4["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "make page 4"
+# page_4["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "get page 5"
-page_5 = shoe_api.get_sneaker_details("5")
+# puts "get page 5"
+# page_5 = shoe_api.get_sneaker_details("5")
 
-puts "make page 5"
-page_5["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "make page 5"
+# page_5["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "get page 6"
-page_6 = shoe_api.get_sneaker_details("6")
+# puts "get page 6"
+# page_6 = shoe_api.get_sneaker_details("6")
 
-puts "make page 6"
-page_6["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "make page 6"
+# page_6["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "get page 7"
-page_7 = shoe_api.get_sneaker_details("7")
+# puts "get page 7"
+# page_7 = shoe_api.get_sneaker_details("7")
 
-puts "make page 7"
-page_7["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "make page 7"
+# page_7["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "get page 8"
-page_8 = shoe_api.get_sneaker_details("8")
+# puts "get page 8"
+# page_8 = shoe_api.get_sneaker_details("8")
 
-puts "make page 8"
-page_8["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "make page 8"
+# page_8["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "get page 9"
-page_9 = shoe_api.get_sneaker_details("9")
+# puts "get page 9"
+# page_9 = shoe_api.get_sneaker_details("9")
 
-puts "make page 9"
-page_9["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "make page 9"
+# page_9["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "get page 10"
-page_10 = shoe_api.get_sneaker_details("10")
+# puts "get page 10"
+# page_10 = shoe_api.get_sneaker_details("10")
 
-puts "make page 10"
-page_10["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "make page 10"
+# page_10["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "get page 11"
-page_11 = shoe_api.get_sneaker_details("11")
+# puts "get page 11"
+# page_11 = shoe_api.get_sneaker_details("11")
 
-puts "make page 11"
-page_11["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "make page 11"
+# page_11["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
+# puts "get page 12"
+# page_12 = shoe_api.get_sneaker_details("12")
 
-puts "get page 12"
-page_12 = shoe_api.get_sneaker_details("12")
+# puts "make page 12"
+# page_12["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "make page 12"
-page_12["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "get page 13"
+# page_13 = shoe_api.get_sneaker_details("13")
 
-puts "get page 13"
-page_13 = shoe_api.get_sneaker_details("13")
+# puts "make page 13"
+# page_13["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "make page 13"
-page_13["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "get page 14"
+# page_14 = shoe_api.get_sneaker_details("14")
 
-puts "get page 14"
-page_14 = shoe_api.get_sneaker_details("14")
+# puts "make page 14"
+# page_14["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "make page 14"
-page_14["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "get page 15"
+# page_15 = shoe_api.get_sneaker_details("15")
 
-puts "get page 15"
-page_15 = shoe_api.get_sneaker_details("15")
+# puts "make page 15"
+# page_15["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "make page 15"
-page_15["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "get page 16"
+# page_16 = shoe_api.get_sneaker_details("16")
 
-puts "get page 16"
-page_16 = shoe_api.get_sneaker_details("16")
+# puts "make page 16"
+# page_16["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "make page 16"
-page_16["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "get page 17"
+# page_17 = shoe_api.get_sneaker_details("17")
 
-puts "get page 17"
-page_17 = shoe_api.get_sneaker_details("17")
+# puts "make page 17"
+# page_17["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "make page 17"
-page_17["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "get page 18"
+# page_18 = shoe_api.get_sneaker_details("18")
 
-puts "get page 18"
-page_18 = shoe_api.get_sneaker_details("18")
+# puts "make page 18"
+# page_18["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
+# puts "get page 19"
+# page_19 = shoe_api.get_sneaker_details("19")
 
-puts "make page 18"
-page_18["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
-puts "get page 19"
-page_19 = shoe_api.get_sneaker_details("19")
+# puts "make page 19"
+# page_19["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
-puts "make page 19"
-page_19["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "get page 20"
+# page_20 = shoe_api.get_sneaker_details("20")
 
-puts "get page 20"
-page_20 = shoe_api.get_sneaker_details("20")
-
-puts "make page 20"
-page_20["results"].each do |s|
-    Shoe.create(name: s["title"], 
-            brand: s["brand"], 
-            silhouette: s["shoe"], 
-            sku: s["styleId"], 
-            release_date: s["releaseDate"], 
-            colorway: s["colorway"], 
-            retail_price: s["retailPrice"], 
-            gender: s["gender"], 
-            image: s["media"]["imageUrl"]
-            )
-        end
+# puts "make page 20"
+# page_20["results"].each do |s|
+#     Shoe.create(name: s["title"], 
+#             brand: s["brand"], 
+#             silhouette: s["shoe"], 
+#             sku: s["styleId"], 
+#             release_date: s["releaseDate"], 
+#             colorway: s["colorway"], 
+#             retail_price: s["retailPrice"], 
+#             gender: s["gender"], 
+#             image: s["media"]["imageUrl"]
+#             )
+#         end
 
 # puts "get page 21"
 # page_21 = shoe_api.get_sneaker_details("21")
