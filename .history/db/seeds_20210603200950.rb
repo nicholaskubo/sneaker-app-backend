@@ -12,7 +12,7 @@ all_bios = ["TIP TOEIN IN MY JORDANS", "Bands, bands, bands", "Got it out the mu
 
 backgrounds = ["bg1", "bg2"]
 
-30.times do 
+32.times do 
     User.create(username: Faker::FunnyName.unique.name, password: "password", image: Faker::Avatar.image(size: "150x150", format: "jpg", set: "set2", bgset: backgrounds.sample ), bio: all_bios.sample)
 end
 
